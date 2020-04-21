@@ -2,6 +2,7 @@ package PacManCS;
 import javafx.fxml.FXML;
 
 import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -20,7 +21,7 @@ public class Controller implements EventHandler<KeyEvent> {
 	private static int powerPelletModeCounter;
 	private boolean pause;
 	private PacManMechanics pacManMechanics;
-	private static final String[] levelFiles = {"src/levels/level1.txt", "src/levels/level2.txt", "src/levels/level3.txt"};
+	private static final String [] levelFiles = {"src/levels/level1.txt", "src/levels/level2.txt", "src/levels/level3.txt"};
 	public Controller() {
 		this.pause=false;
 	}
@@ -65,23 +66,24 @@ public class Controller implements EventHandler<KeyEvent> {
 			PacManMechanics.setPowerPelletMode(false);
 		}
 	}
-	public void handle (KeyEvent keyEvent) {
+	public void handle (Scene scene) {
+		scene.setOnKeyPressed(ke -> {
 		boolean keyRecognized = true;
-		KeyCode code = keyEvent.getCode();
+		KeyCode keycode = ke.getCode();
 		PacManMechanics.Movement movement = PacManMechanics.Movement.STOP;
-		if(code == KeyCode.LEFT) {
+		if(keycode.equals(KeyCode.LEFT)) {
 			movement = PacManMechanics.Movement.LEFT;
 		}
-		else if (code == KeyCode.RIGHT) {
+		else if (keycode.equals(KeyCode.RIGHT)) {
 			movement = PacManMechanics.Movement.RIGHT;
 		}
-		else if (code == KeyCode.UP) {
+		else if (keycode.equals(KeyCode.UP)) {
 			movement = PacManMechanics.Movement.UP;
 		}
-		else if (code == KeyCode.DOWN) {
+		else if (keycode.equals(KeyCode.DOWN)) {
 			movement = PacManMechanics.Movement.DOWN;
 		}
-		else if(code == KeyCode.P) {
+		else if(keycode.equals(KeyCode.P)) {
 			pause();
 			this.pacManMechanics.newGame();
 			this.gameOverLabel.setText(String.format(""));
@@ -92,9 +94,13 @@ public class Controller implements EventHandler<KeyEvent> {
 			keyRecognized = false;
 		}
 		if(keyRecognized) {
-			keyEvent.consume();
+			ke.consume();
 			pacManMechanics.setCurrMovement(movement);
 		}
+		else {
+			
+		}
+		});
 	}
 	public void pause() {
 		this.timer.cancel();
@@ -117,5 +123,10 @@ public class Controller implements EventHandler<KeyEvent> {
     }
 	public boolean getPaused() {
 		return pause;
+	}
+	@Override
+	public void handle(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 }
