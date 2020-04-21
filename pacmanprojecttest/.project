@@ -22,29 +22,19 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>src/pacmanLevels/Pacman_Level1 (1).txt</name>
+			<name>src/pacmanLevels/level1.txt</name>
 			<type>1</type>
 			<location>C:/Users/wilsona10/Downloads/Pacman_Level1 (1).txt</location>
 		</link>
 		<link>
-			<name>src/pacmanLevels/Pacman_Level2 (1).txt</name>
+			<name>src/pacmanLevels/level2.txt</name>
 			<type>1</type>
 			<location>C:/Users/wilsona10/Downloads/Pacman_Level2 (1).txt</location>
 		</link>
 		<link>
-			<name>src/pacmanLevels/Pacman_Level3.txt</name>
+			<name>src/pacmanLevels/level3.txt</name>
 			<type>1</type>
 			<location>C:/Users/wilsona10/Downloads/Pacman_Level3.txt</location>
-		</link>
-		<link>
-			<name>src/pictures/cyanGhost.gif</name>
-			<type>1</type>
-			<location>C:/Users/wilsona10/Pictures/200 (1).gif</location>
-		</link>
-		<link>
-			<name>src/pictures/pinkGhost.gif</name>
-			<type>1</type>
-			<location>C:/Users/wilsona10/Pictures/200.gif</location>
 		</link>
 	</linkedResources>
 </projectDescription>

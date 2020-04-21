@@ -27,17 +27,15 @@ public class PacManImage extends Group {
 	
 	public PacManImage() {
 		this.blueGhost = new Image(getClass().getResourceAsStream("/pictures/blueghost.gif"));
-		this.cyanGhost = new Image(getClass().getResourceAsStream("/pictures/cyanGhost.gif"));
 		this.orangeGhost = new Image(getClass().getResourceAsStream("/pictures/orangeGhost.gif"));
 		this.pacmanDown = new Image(getClass().getResourceAsStream("/pictures/pacmanDown.gif"));
 		this.pacmanLeft = new Image(getClass().getResourceAsStream("/pictures/pacmanLeft.gif"));
 		this.pacmanRight = new Image(getClass().getResourceAsStream("/pictures/pacmanRight.gif"));
 		this.pacmanUp = new Image(getClass().getResourceAsStream("/pictures/pacmanUp.gif"));
 		this.pacDot = new Image(getClass().getResourceAsStream("/pictures/pacDot.png"));
-		this.powerPellet = new Image(getClass().getResourceAsStream("/pictures/powerPellet"));
+		this.powerPellet = new Image(getClass().getResourceAsStream("/pictures/powerPellet.png"));
 		this.pacWall = new Image(getClass().getResourceAsStream("/pictures/wall.png"));
 		this.redGhost = new Image(getClass().getResourceAsStream("/pictures/redghost.gif"));
-		this.pinkGhost = new Image(getClass().getResourceAsStream("/pictures/pinkGhost.gif"));
 	}
 	private void initializeGrid() {
 		if (this.rowCount > 0 && this.collumnCount > 0) {
@@ -86,7 +84,7 @@ public class PacManImage extends Group {
 				}
 				if (PacManMechanics.isPowerPelletMode() && (Controller.getPowerPelletModeCounter() == 6 || Controller.getPowerPelletModeCounter() == 4 || Controller.getPowerPelletModeCounter() == 2)) {
 					if (i == mechanics.getG1Loc().getX() && j == mechanics.getG1Loc().getY()) {
-						this.cellView[i][j].setImage(this.pinkGhost);
+						this.cellView[i][j].setImage(this.redGhost);
 					}
 					if (i == mechanics.getG2Loc().getX() && j == mechanics.getG2Loc().getY()) {
 						this.cellView[i][j].setImage(this.orangeGhost);
@@ -102,7 +100,7 @@ public class PacManImage extends Group {
 				}
 				else {
 					if (i == mechanics.getG1Loc().getX() && j == mechanics.getG1Loc().getY()) {
-						this.cellView[i][j].setImage(this.pinkGhost);
+						this.cellView[i][j].setImage(this.redGhost);
 					}
 				}
 				if (i == mechanics.getG2Loc().getX() && j == mechanics.getG2Loc().getY()) {
