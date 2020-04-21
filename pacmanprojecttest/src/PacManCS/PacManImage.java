@@ -13,13 +13,11 @@ public class PacManImage extends Group {
 	@FXML private int collumnCount;
 	private ImageView[][] cellView;
 	private Image blueGhost;
-	private Image cyanGhost;
 	private Image orangeGhost;
 	private Image pacmanDown;
 	private Image pacmanLeft;
 	private Image pacmanRight;
 	private Image pacmanUp;
-	private Image pinkGhost;
 	private Image redGhost;
 	private Image pacDot;
 	private Image powerPellet;

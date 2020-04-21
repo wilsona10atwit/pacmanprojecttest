@@ -20,21 +20,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/pacmanLevels/level1.txt</name>
-			<type>1</type>
-			<location>C:/Users/wilsona10/Downloads/Pacman_Level1 (1).txt</location>
-		</link>
-		<link>
-			<name>src/pacmanLevels/level2.txt</name>
-			<type>1</type>
-			<location>C:/Users/wilsona10/Downloads/Pacman_Level2 (1).txt</location>
-		</link>
-		<link>
-			<name>src/pacmanLevels/level3.txt</name>
-			<type>1</type>
-			<location>C:/Users/wilsona10/Downloads/Pacman_Level3.txt</location>
-		</link>
-	</linkedResources>
 </projectDescription>

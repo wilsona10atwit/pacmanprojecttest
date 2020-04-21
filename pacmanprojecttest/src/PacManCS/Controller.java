@@ -25,7 +25,7 @@ public class Controller implements EventHandler<KeyEvent> {
 		this.pause=false;
 	}
 	public void initalize() {
-		String f = this.getLevelFile(0);
+		String f = Controller.getLevelFile(0);
 		this.pacManMechanics = new PacManMechanics();
 		this.update(PacManMechanics.Movement.STOP);
 		powerPelletModeCounter=25;
@@ -37,7 +37,7 @@ public class Controller implements EventHandler<KeyEvent> {
 			public void run() {
 				Platform.runLater(new Runnable() {
 					public void run() {
-						update(pacManMechanics.getCurrMovement());
+						update(PacManMechanics.getCurrMovement());
 					}
 				});
 			}
@@ -51,23 +51,23 @@ public class Controller implements EventHandler<KeyEvent> {
 		this.scoreLabel.setText(String.format("Score: %d", this.pacManMechanics.getScore()));
 		this.levelLabel.setText(String.format("Level: %d", this.pacManMechanics.getLevel()));
 		this.livesLabel.setText(String.format("Lives: %d", this.pacManMechanics.getLives()));
-		if (pacManMechanics.gameOver()) {
+		if (PacManMechanics.gameOver()) {
 			this.gameOverLabel.setText(String.format("GAME OVER!"));
 			pause();
 		}
-		if(pacManMechanics.isYouWin()) {
+		if(PacManMechanics.isYouWin()) {
 			this.gameOverLabel.setText(String.format("YOU WIN!"));
 		}
-		if (pacManMechanics.isPowerPelletMode()) {
+		if (PacManMechanics.isPowerPelletMode()) {
 			powerPelletModeCounter--;
 		}
-		if (powerPelletModeCounter == 00 && pacManMechanics.isPowerPelletMode()) {
-			pacManMechanics.setPowerPelletMode(false);
+		if (powerPelletModeCounter == 00 && PacManMechanics.isPowerPelletMode()) {
+			PacManMechanics.setPowerPelletMode(false);
 		}
 	}
-	public void handle (KeyEvent ke) {
+	public void handle (KeyEvent keyEvent) {
 		boolean keyRecognized = true;
-		KeyCode code = ke.getCode();
+		KeyCode code = keyEvent.getCode();
 		PacManMechanics.Movement movement = PacManMechanics.Movement.STOP;
 		if(code == KeyCode.LEFT) {
 			movement = PacManMechanics.Movement.LEFT;
@@ -92,7 +92,7 @@ public class Controller implements EventHandler<KeyEvent> {
 			keyRecognized = false;
 		}
 		if(keyRecognized) {
-			ke.consume();
+			keyEvent.consume();
 			pacManMechanics.setCurrMovement(movement);
 		}
 	}

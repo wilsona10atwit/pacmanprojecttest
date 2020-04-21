@@ -13,7 +13,7 @@
     </top>
 
     <center>
-        <PacManImage fx:id="pacManImage" rowCount="21" columnCount="19" />
+        <PacManImage fx:id="pacManImage" rowCount="21" collumnCount="19" />
     </center>
 
     <bottom>

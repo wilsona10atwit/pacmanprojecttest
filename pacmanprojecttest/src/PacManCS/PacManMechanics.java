@@ -2,6 +2,7 @@ package PacManCS;
 
 
 import javafx.fxml.FXML;
+
 import java.io.*;
 import javafx.geometry.Point2D;
 import java.util.*;
@@ -42,10 +43,10 @@ public class PacManMechanics {
 	}
 
 	public void loadLevel(String fName) {
-		File f = new File(fName);
+		File file = new File(fName);
 		Scanner scanner = null;
 		try {
-			scanner = new Scanner(f);
+			scanner = new Scanner(file);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -61,7 +62,7 @@ public class PacManMechanics {
 		collumnCount = collumnCount / rowCount;
 		Scanner s2 = null;
 		try {
-			s2 = new Scanner(f);
+			s2 = new Scanner(file);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -120,15 +121,15 @@ public class PacManMechanics {
 	}
 
 	public void newGame() {
-		this.gameOver = false;
-		this.youWin = false;
-		this.powerPelletMode = false;
+		PacManMechanics.gameOver = false;
+		PacManMechanics.youWin = false;
+		PacManMechanics.powerPelletMode = false;
 		this.pelletCount = 0;
 		rowCount = 0;
 		collumnCount = 0;
 		this.score = 0;
 		this.level = 1;
-		this.lives = 3;
+		PacManMechanics.lives = 3;
 		this.loadLevel(Controller.getLevelFile(0));
 	}
 	public void nextLevel() {
@@ -450,7 +451,7 @@ public class PacManMechanics {
 		return lives;
 	}
 	public void setLives(int lives) {
-		this.lives=lives;
+		PacManMechanics.lives=lives;
 	}
 	public int getScore() {
 		return score;
