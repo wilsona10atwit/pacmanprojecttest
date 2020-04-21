@@ -26,7 +26,7 @@ public class PacManImage extends Group {
 	private Image pacWall;
 	
 	public PacManImage() {
-		this.blueGhost = new Image(getClass().getResourceAsStream("/pictures/blueGhost.gif"));
+		this.blueGhost = new Image(getClass().getResourceAsStream("/pictures/blueghost.gif"));
 		this.cyanGhost = new Image(getClass().getResourceAsStream("/pictures/cyanGhost.gif"));
 		this.orangeGhost = new Image(getClass().getResourceAsStream("/pictures/orangeGhost.gif"));
 		this.pacmanDown = new Image(getClass().getResourceAsStream("/pictures/pacmanDown.gif"));
@@ -35,7 +35,9 @@ public class PacManImage extends Group {
 		this.pacmanUp = new Image(getClass().getResourceAsStream("/pictures/pacmanUp.gif"));
 		this.pacDot = new Image(getClass().getResourceAsStream("/pictures/pacDot.png"));
 		this.powerPellet = new Image(getClass().getResourceAsStream("/pictures/powerPellet"));
-		this.pacWall = new Image(getClass().getResourceAsStream("/pictures/pacWall.jpg"));
+		this.pacWall = new Image(getClass().getResourceAsStream("/pictures/wall.png"));
+		this.redGhost = new Image(getClass().getResourceAsStream("/pictures/redghost.gif"));
+		this.pinkGhost = new Image(getClass().getResourceAsStream("/pictures/pinkGhost.gif"));
 	}
 	private void initializeGrid() {
 		if (this.rowCount > 0 && this.collumnCount > 0) {

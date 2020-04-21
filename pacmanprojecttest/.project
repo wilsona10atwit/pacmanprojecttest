@@ -37,34 +37,14 @@
 			<location>C:/Users/wilsona10/Downloads/Pacman_Level3.txt</location>
 		</link>
 		<link>
-			<name>src/pictures/blueGhost.gif</name>
-			<type>1</type>
-			<location>C:/Users/wilsona10/Pictures/collection-of-free-transparent-blue-ghost-pacman-download-on-ui-ex-blue-ghost-pac-man-png-200_200.gif</location>
-		</link>
-		<link>
 			<name>src/pictures/cyanGhost.gif</name>
 			<type>1</type>
 			<location>C:/Users/wilsona10/Pictures/200 (1).gif</location>
 		</link>
 		<link>
-			<name>src/pictures/orangeGhost.gif</name>
-			<type>1</type>
-			<location>C:/Users/wilsona10/Pictures/d5sab7r-ad4dbb6e-c8d8-48bb-8c2b-5073b2091189.gif</location>
-		</link>
-		<link>
-			<name>src/pictures/pacWall.jpg</name>
-			<type>1</type>
-			<location>C:/Users/wilsona10/Pictures/wall (2).jpg</location>
-		</link>
-		<link>
 			<name>src/pictures/pinkGhost.gif</name>
 			<type>1</type>
 			<location>C:/Users/wilsona10/Pictures/200.gif</location>
-		</link>
-		<link>
-			<name>src/pictures/redGhost.gif</name>
-			<type>1</type>
-			<location>C:/Users/wilsona10/Pictures/200 (2).gif</location>
 		</link>
 	</linkedResources>
 </projectDescription>
